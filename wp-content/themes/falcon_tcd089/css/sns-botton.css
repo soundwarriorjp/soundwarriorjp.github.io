@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+
+/* ----------------------- Share button -------------------------- */
+
+.single_share li a [class^="icon-"]{
+  display: none;
+}
+
+/*** 共通 ***/
+.single_share ul { display:flex; flex-wrap:wrap; margin:0 -3px -3px 0; }
+.single_share li:not(.default) { flex: 1 1 0%; margin:0 3px 3px 0; max-width:100px; }
+
+.single_share li:not(.default) a { display:flex; flex-wrap:wrap; justify-content:center; text-align:center; position:relative; border-radius:3px; align-items:center; cursor: pointer;}
+
+.single_share a:before { font-family:'design_plus'; display:block; color:#fff; margin-right:5px; position:relative; transition: color 0.25s ease; -webkit-font-smoothing: antialiased; }
+
+.single_share .ttl { font-size: 12px;position: relative;font-family: Arial; }
+
+/*** サイズ違い ***/
+.single_share .share-type1 a,
+.single_share .share-type2 a { line-height: 30px;}
+
+.single_share .share-type3 ul,
+.single_share .share-type4 ul { margin:0 -5px -5px 0; }
+.single_share .share-type3 li,
+.single_share .share-type4 li { flex: 0 0 auto; width:calc(25% - 5px); margin:0 5px 5px 0; max-width:inherit; }
+.single_share .share-type3 a,
+.single_share .share-type4 a {  height: 40px;}
+
+.single_share .share-type3 a { line-height:42px; }
+.single_share .share-type4 a { line-height:40px; }
+
+/** カラー or モノクロ ***/
+.single_share .share-type1 a,
+.single_share .share-type3 a { background:#000; color:#fff;}
+
+.single_share .share-type2 a,
+.single_share .share-type4 a { background:#f2f2f2; color:#000; border:1px solid #ddd; }
+
+.single_share .share-type2 a:before,
+.single_share .share-type4 a:before { color:#000; }
+
+/*** 各シェアアイコン ***/
+
+.single_share .twitter a:before { font-family: 'tiktok_x_icon'; content: "\e901"; font-size:12px; top:-1px; }
+.single_share .facebook a:before { content:'\e944'; font-size:18px; top:-1px; }
+.single_share .hatebu a:before { content:'\e908'; font-size:14px; top:0px; }
+.single_share .pocket a:before { content:'\e90a'; font-size:16px; top:0px; }
+.single_share .rss a:before { content:'\e90b'; font-size:12px; top:-0.5px; }
+.single_share .feedly a:before { content:'\e907'; font-size:15px; top:-1px; }
+.single_share .pinterest a:before { content:'\e905'; font-size:16px; top:-0.5px; }
+.single_share .line_button a:before { content:'\e909'; font-size:16px; top:0px; }
+.single_share .note_button a:before {
+  content: '';
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 100 100'%3E%3Cpath d='M10 10.4968C25.408 10.4968 46.504 9.70479 61.648 10.1208C81.952 10.6408 89.624 19.5048 89.888 41.3448C90.152 53.7208 89.888 89.1048 89.888 89.1048H67.896C67.896 58.1368 68.008 53.0168 67.896 43.2568C67.632 34.6568 65.2 30.5768 58.584 29.7928C51.592 29.0088 31.992 29.6808 31.992 29.6808V89.1448H10V10.4968Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center; top:0px;
+}
+
+.single_share .share-type1 .twitter a,
+.single_share .share-type3 .twitter a { background:#000; border-color:#000; }
+.single_share .share-type1 .facebook a,
+.single_share .share-type3 .facebook a { background:#35629a; border-color:#35629a; }
+.single_share .share-type1 .hatebu a,
+.single_share .share-type3 .hatebu a { background:#3c7dd1; border-color:#3c7dd1; }
+.single_share .share-type1 .pocket a,
+.single_share .share-type3 .pocket a { background:#ee4056; border-color:#ee4056; }
+.single_share .share-type1 .rss a,
+.single_share .share-type3 .rss a { background:#ffb53c; border-color:#ffb53c; }
+.single_share .share-type1 .feedly a,
+.single_share .share-type3 .feedly a { background:#6cc655; border-color:#6cc655; }
+.single_share .share-type1 .pinterest a,
+.single_share .share-type3 .pinterest a { background:#d4121c; border-color:#d4121c; }
+.single_share .share-type1 .line_button a,
+.single_share .share-type3 .line_button a { background:#00B900; border-color:#00B900; }
+.single_share .share-type1 .note_button a,
+.single_share .share-type3 .note_button a { background:#fff; border:1px solid #ddd; color:#000; box-sizing:content-box; top: -1px; }
+
+@media(hover: hover) {
+  .single_share .share-type1 .twitter a:hover,
+  .single_share .share-type3 .twitter a:hover { background:#666; }
+  .single_share .share-type1 .facebook a:hover,
+  .single_share .share-type3 .facebook a:hover { background:#1f3669;}
+  .single_share .share-type1 .hatebu a:hover,
+  .single_share .share-type3 .hatebu a:hover { background:#0270ac; }
+  .single_share .share-type1 .pocket a:hover,
+  .single_share .share-type3 .pocket a:hover { background:#c53648; }
+  .single_share .share-type1 .rss a:hover,
+  .single_share .share-type3 .rss a:hover { background:#e09900;}
+  .single_share .share-type1 .feedly a:hover,
+  .single_share .share-type3 .feedly a:hover { background:#5ca449; }
+  .single_share .share-type1 .pinterest a:hover,
+  .single_share .share-type3 .pinterest a:hover { background:#a42f35; }
+  .single_share .share-type1 .line_button a:hover,
+  .single_share .share-type3 .line_button a:hover { background:#009100; border-color:#009100; }
+  .single_share .share-type1 .note_button a:hover,
+  .single_share .share-type3 .note_button a:hover { background:#000000; border-color:#000000; }
+  .single_share .share-type1 .note_button a:hover:before,
+  .single_share .share-type3 .note_button a:hover:before {
+    content: '';
+    display: inline-block;
+    width: 0.9em;
+    height: 0.9em;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 100 100'%3E%3Cpath d='M10 10.4968C25.408 10.4968 46.504 9.70479 61.648 10.1208C81.952 10.6408 89.624 19.5048 89.888 41.3448C90.152 53.7208 89.888 89.1048 89.888 89.1048H67.896C67.896 58.1368 68.008 53.0168 67.896 43.2568C67.632 34.6568 65.2 30.5768 58.584 29.7928C51.592 29.0088 31.992 29.6808 31.992 29.6808V89.1448H10V10.4968Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; top:0px;
+}
+  .single_share .share-type1 a:hover,
+  .single_share .share-type3 a:hover { color:#fff; }
+  
+  .single_share .share-type2 .twitter a:hover,
+  .single_share .share-type4 .twitter a:hover { background:#000; border-color:#000; }
+  .single_share .share-type2 .facebook a:hover,
+  .single_share .share-type4 .facebook a:hover { background:#35629a; border-color:#35629a; }
+  .single_share .share-type2 .hatebu a:hover,
+  .single_share .share-type4 .hatebu a:hover { background:#3c7dd1; border-color:#3c7dd1; }
+  .single_share .share-type2 .pocket a:hover,
+  .single_share .share-type4 .pocket a:hover { background:#ee4056; border-color:#ee4056; }
+  .single_share .share-type2 .rss a:hover,
+  .single_share .share-type4 .rss a:hover { background:#ffb53c; border-color:#ffb53c; }
+  .single_share .share-type2 .feedly a:hover,
+  .single_share .share-type4 .feedly a:hover { background:#6cc655; border-color:#6cc655; }
+  .single_share .share-type2 .pinterest a:hover,
+  .single_share .share-type4 .pinterest a:hover { background:#d4121c; border-color:#d4121c; }
+  .single_share .share-type2 .line_button a:hover,
+  .single_share .share-type4 .line_button a:hover { background:#00B900; border-color:#00B900; }
+  .single_share .share-type2 .note_button a:hover,
+  .single_share .share-type4 .note_button a:hover { background:#000000; border-color:#000000; }
+  .single_share .share-type2 .note_button a:hover:before,
+  .single_share .share-type4 .note_button a:hover:before {
+    content: '';
+    display: inline-block;
+    width: 0.9em;
+    height: 0.9em;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 100 100'%3E%3Cpath d='M10 10.4968C25.408 10.4968 46.504 9.70479 61.648 10.1208C81.952 10.6408 89.624 19.5048 89.888 41.3448C90.152 53.7208 89.888 89.1048 89.888 89.1048H67.896C67.896 58.1368 68.008 53.0168 67.896 43.2568C67.632 34.6568 65.2 30.5768 58.584 29.7928C51.592 29.0088 31.992 29.6808 31.992 29.6808V89.1448H10V10.4968Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; top:0px;
+}
+  .single_share .share-type2 a:hover,
+  .single_share .share-type4 a:hover { color:#fff; }
+  .single_share .share-type2 a:hover:before,
+  .single_share .share-type4 a:hover:before { color:#fff; }
+}
+
+@media screen and (max-width:800px) {
+  .single_share .share-type1 .ttl,
+  .single_share .share-type2 .ttl { display:none; }
+  .single_share .share-type3 .ttl,
+  .single_share .share-type4 .ttl { display:inline; }
+  
+  .single_share .share-type3 a,
+  .single_share .share-type4 a { height:35px; line-height:37px; }
+  
+  .single_share .share-type4 a { line-height:35px; }
+  
+  .single_share a:before { margin:0; }
+  .single_share .share-type3 a:before,
+  .single_share .share-type4 a:before { margin-right:5px; }
+  
+  
+.single_share .twitter a:before { top:0px }
+.single_share .facebook a:before { top:-1px;  }
+.single_share .hatebu a:before { top:0px; }
+.single_share .pocket a:before { top:0px; }
+.single_share .rss a:before { top:-1px; }
+.single_share .feedly a:before {  top:-1.5px; }
+
+}
+@media screen and (max-width:500px) {
+	.single_share .ttl { max-width:inherit; }
+  .single_share .share-type3 li,
+  .single_share .share-type4 li { width:calc(50% - 5px); max-width:inherit; }
+}
+
+.single_share .share-type5 ul { display:flex; flex-wrap:wrap; margin:0 -3px -10px 0; }
+.single_share .share-type5 li { margin:0 3px 3px 0; }
+.single_share .share-type5 li.pocket_button { width:90px !important; }
